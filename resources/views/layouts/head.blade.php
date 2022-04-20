@@ -18,30 +18,34 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-primary bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-primary bg-dark ps-5 pe-5">
             <div>
                 <a class="navbar-brand" href="#">Logo</a>
             </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="buscar">
-                <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
-            </form>
-            <div class="d-flex justify-content-end">
-                <div class="dropdown d-flex align-items-center">
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="pesquisa navegacao">
+                <form>
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="buscar">
+                    <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
+                </form>
+            </div>
+
+            <div class="dropdown navegacao">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     Explore
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                        <li><a class="dropdown-item active" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="text-white navbar-nav m-3">
-                        <li class="nav-item px-2"><a href="#" class="text-decoration-none text-reset">Sobre</a></li>
-                        <li class="nav-item px-2"><a href="#" class="text-decoration-none text-reset">FAQ</a></li>
-                    </ul>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <div class="text-white collapse navbar-collapse">
+                    <div class="navbar-nav">
+                        <a href="#" class="text-decoration-none text-reset nav-link">Sobre</a>
+                        <a href="#" class="text-decoration-none text-reset nav-link">FAQ</a>
+                    </div>
                 </div>
             </div>
         </nav>

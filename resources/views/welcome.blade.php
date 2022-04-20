@@ -38,23 +38,24 @@
     </div>
     <div class="row pt-2">
         <div class="col-3">
+            <div class="col-3 divnft">
+                <a href="#"><img src="/images/nft.gif" class="nft"></a>
+            </div>
+
+        </div>
+        <div class="col-3">
             <div class="divnft">
-                <img src="/images/nft.gif" class="nft">
+                <a href="#"><img src="/images/nft.gif" class="nft"></a>
             </div>
         </div>
         <div class="col-3">
             <div class="divnft">
-                <img src="/images/nft.gif" class="nft">
+                <a href="#"><img src="/images/nft.gif" class="nft"></a>
             </div>
         </div>
         <div class="col-3">
             <div class="divnft">
-                <img src="/images/nft.gif" class="nft">
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="divnft">
-                <img src="/images/nft.gif" class="nft">
+                <a href="#"><img src="/images/nft.gif" class="nft"></a>
             </div>
         </div>
     </div>
