@@ -30,3 +30,9 @@ Route::get('/nft/edit/{nft}', [NftController::class, 'edit'])->name('nft.edit');
 Route::post('/nft/edit/{nft}', [NftController::class, 'update'])->name('nft.update');
 Route::get('/nft/trash', [NftController::class, 'trash'])->name('nft.trash');
 Route::get('nft/restore/{nft}', [NftController::class, 'restore'])->name('nft.restore');
+
+
+/*----------------------------
+| Route for Categoria (CRUD) |
+----------------------------*/
+
