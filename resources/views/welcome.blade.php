@@ -129,5 +129,24 @@
     </div>
 </section>
 
+<footer class="pt-5">
+    <div class="div-color">
+        <address class="rodape">
+            Av. Eng. Eusébio Stevaux, 823 <br>
+            Santo Amaro, São Paulo - SP<br>
+            04696-000
+        </address>
+        <div class="rodape">
+            <span class="rodape">Tel: (XX) XXXXX-XXXX</span>
+            <div class="icones">
+                <a href="#" class="midia"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="midia"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="midia"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="midia"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
 @endsection

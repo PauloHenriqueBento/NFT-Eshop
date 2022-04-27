@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e39c5f9262.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
     <title>@yield('title')</title>
 </head>
@@ -52,9 +53,6 @@
     </header>
     <main>
         @yield('content')
-        <footer>
-            <p>NFT-Eshop &copy; 2022</p>
-        </footer>
     </main>
 </body>
 </html>
