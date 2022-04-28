@@ -16,7 +16,16 @@ class NftController extends Controller
     }
 
     public function store(Request $request){
-        $nft = Nft::create($request->all());
+        $image = "storage/".$request->file('image_path')->store('itens');
+
+
+        $nft = Nft::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'image_path' => $image,
+            'price' => $request->price,
+        ]);
+
 
         session()->flash('success', 'NFT criado com Sucesso!');
         return redirect(route('nft.index'));

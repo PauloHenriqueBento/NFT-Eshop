@@ -8,6 +8,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
+                <th>Image</th>
                 <th>Descrição</th>
                 <th>Preço</th>
                 <th>Editar</th>
@@ -19,6 +20,7 @@
                 <tr>
                     <td>{{$nft->id}}</td>
                     <td>{{$nft->name}}</td>
+                    <td><img src="{{asset($nft->image_path)}}"></td>
                     <td>{{$nft->description}}</td>
                     <td>{{$nft->price}}</td>
                     <td><a class="btn btn-primary" href="{{ route('nft.edit', $nft->id) }}">Editar</a></td>
