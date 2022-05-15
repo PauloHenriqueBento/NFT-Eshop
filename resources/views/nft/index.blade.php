@@ -23,7 +23,7 @@
                     <td>{{$nft->name}}</td>
                     <td><img src="{{asset($nft->image_path)}}"></td>
                     <td>{{$nft->description}}</td>
-                    <td>{{$nft->Category->name}}</td>
+                    <td>{{$nft->Category->name}}
                     <td>{{$nft->price}}</td>
                     <td><a class="btn btn-primary" href="{{ route('nft.edit', $nft->id) }}">Editar</a></td>
                     <td><a class="btn btn-danger" href="{{ route('nft.destroy', $nft->id) }}">Apagar</a></td>

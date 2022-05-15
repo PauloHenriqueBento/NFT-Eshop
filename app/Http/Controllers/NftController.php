@@ -25,6 +25,7 @@ class NftController extends Controller
         $nft = Nft::create([
             'name' => $request->name,
             'description' => $request->description,
+            'category_id'  => $request->category_id,
             'image_path' => $image,
             'price' => $request->price,
         ]);
