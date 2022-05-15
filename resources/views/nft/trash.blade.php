@@ -11,8 +11,7 @@
                 <th>Descrição</th>
                 <th>Categoria</th>
                 <th>Preço</th>
-                <th>Editar</th>
-                <th>Apagar</th>
+                <th>Restaurar</th>
             </tr>
         </thead>
         <tbody>
@@ -23,8 +22,7 @@
                     <td>{{$nft->description}}</td>
                     <td>{{$nft->Category->name}}</td>
                     <td>{{$nft->price}}</td>
-                    <td><a class="btn btn-primary" href="{{ route('nft.edit', $nft->id) }}">Editar</a></td>
-                    <td><a class="btn btn-danger" href="{{ route('nft.destroy', $nft->id) }}">Apagar</a></td>
+                    <td><a class="btn btn-primary" href="{{ route('nft.restore', $nft->id) }}">Restaurar</a></td>
                 </tr>
             @endforeach
         </tbody>

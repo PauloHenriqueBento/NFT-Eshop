@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Nft extends Model
+class Category extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = ['name'];
 
-    protected $fillable = ['name', 'description', 'price', 'category_id'];
-
-    public function Category(){
-        return $this->belongsTo(Category::class);
+    public function Nfts(){
+        return $this->hasMany(Nft::class);
     }
 }
