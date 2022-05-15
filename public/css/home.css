@@ -1,0 +1,74 @@
+body{
+    background-color:#262323;
+}
+
+header nav a:hover{
+    background-color: #160133;
+}
+
+.navegacao{
+    margin-left: auto;
+    padding-left: auto;
+}
+
+.pesquisa{
+    width: 50%;
+}
+
+.nft{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.divnft{
+    background-color: white;
+    width: 250px;
+    height: 320px;
+    border-radius: 20px;
+}
+
+.divnft-2{
+    background-color: white;
+    width: 250px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.nft-criadores{
+    width: 250px;
+    height: 120px;
+    border-radius: 20px;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.rodape{
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    vertical-align: top;
+}
+.div-color{
+    background-color: #160133;
+    color:  #262323;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.icones img{
+    width: 20px;
+    display: inline;
+}
+
+.midia{
+    color: #262323;
+    font-size: 20px;
+}
+
+

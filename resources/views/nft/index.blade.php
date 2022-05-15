@@ -8,6 +8,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
+                <th>Image</th>
                 <th>Descrição</th>
                 <th>Categoria</th>
                 <th>Preço</th>
@@ -20,6 +21,7 @@
                 <tr>
                     <td>{{$nft->id}}</td>
                     <td>{{$nft->name}}</td>
+                    <td><img src="{{asset($nft->image_path)}}"></td>
                     <td>{{$nft->description}}</td>
                     <td>{{$nft->Category->name}}</td>
                     <td>{{$nft->price}}</td>

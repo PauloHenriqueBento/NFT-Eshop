@@ -11,7 +11,7 @@ class Nft extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['name', 'description', 'price', 'category_id'];
+    protected $fillable = ['name', 'description', 'price', 'category_id', 'image_path'];
 
     public function Category(){
         return $this->belongsTo(Category::class);
