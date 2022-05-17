@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NftController;
 use App\Http\Controllers\CategoryController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
+require __DIR__.'/auth.php';
 /*------------------------
 | Route for NFT's (CRUD) |
 ------------------------*/
@@ -45,4 +48,3 @@ Route::get('/category/edit/{category}', [CategoryController::class, 'edit'])->na
 Route::put('/category/edit/{category}', [CategoryController::class, 'update'])->name('category.update');
 Route::get('/category/trash', [CategoryController::class, 'trash'])->name('category.trash');
 Route::get('/category/restore/{category}', [CategoryController::class, 'restore'])->name('category.restore');
-
