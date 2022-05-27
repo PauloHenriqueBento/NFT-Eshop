@@ -40,22 +40,117 @@
         <div class="col-3">
             <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
+                <div class="row m-auto">
+                    <div class="m-auto col-8 pt-2">
+                        <span class="align-middle"><b>Warrior #001</b></span>
+                    </div>
+                    <div class="col-4 m-auto pt-2">
+                        <button class="adicionar">+</button>
+                    </div>
+                    <div class="col-4">
+                        <span class="criadorEsq">Preço</span>
+                        <!--<span><i class="fa-solid fa-circle-dollar"></i></span>-->
+                    </div>
+                    <div class="col-8  d-flex justify-content-end">
+                        <div>
+                            <img src="/images/bit.png" class="bit">
+                            <span><b>$1.000,00</b></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <span class="criadorEsq">Criador</span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <span class="nomeCriador">Nome</span>
+                    </div>
+                </div>
             </div>
-
         </div>
         <div class="col-3">
-            <div class="divnft">
+            <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
+                <div class="row m-auto">
+                    <div class="m-auto col-8 pt-2">
+                        <span class="align-middle"><b>Warrior #001</b></span>
+                    </div>
+                    <div class="col-4 m-auto pt-2">
+                        <button class="adicionar">+</button>
+                    </div>
+                    <div class="col-4">
+                        <span class="criadorEsq">Preço</span>
+                        <!--<span><i class="fa-solid fa-circle-dollar"></i></span>-->
+                    </div>
+                    <div class="col-8  d-flex justify-content-end">
+                        <div>
+                            <img src="/images/bit.png" class="bit">
+                            <span><b>$1.000,00</b></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <span class="criadorEsq">Criador</span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <span class="nomeCriador">Nome</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-3">
-            <div class="divnft">
+            <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
+                <div class="row m-auto">
+                    <div class="m-auto col-8 pt-2">
+                        <span class="align-middle"><b>Warrior #001</b></span>
+                    </div>
+                    <div class="col-4 m-auto pt-2">
+                        <button class="adicionar">+</button>
+                    </div>
+                    <div class="col-4">
+                        <span class="criadorEsq">Preço</span>
+                        <!--<span><i class="fa-solid fa-circle-dollar"></i></span>-->
+                    </div>
+                    <div class="col-8  d-flex justify-content-end">
+                        <div>
+                            <img src="/images/bit.png" class="bit">
+                            <span><b>$1.000,00</b></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <span class="criadorEsq">Criador</span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <span class="nomeCriador">Nome</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-3">
-            <div class="divnft">
+            <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
+                <div class="row m-auto">
+                    <div class="m-auto col-8 pt-2">
+                        <span class="align-middle"><b>Warrior #001</b></span>
+                    </div>
+                    <div class="col-4 m-auto pt-2">
+                        <button class="adicionar">+</button>
+                    </div>
+                    <div class="col-4">
+                        <span class="criadorEsq">Preço</span>
+                        <!--<span><i class="fa-solid fa-circle-dollar"></i></span>-->
+                    </div>
+                    <div class="col-8  d-flex justify-content-end">
+                        <div>
+                            <img src="/images/bit.png" class="bit">
+                            <span><b>$1.000,00</b></span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <span class="criadorEsq">Criador</span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <span class="nomeCriador">Nome</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NftController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\Teste_Product;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,3 +51,13 @@ Route::get('/category/edit/{category}', [CategoryController::class, 'edit'])->na
 Route::put('/category/edit/{category}', [CategoryController::class, 'update'])->name('category.update');
 Route::get('/category/trash', [CategoryController::class, 'trash'])->name('category.trash');
 Route::get('/category/restore/{category}', [CategoryController::class, 'restore'])->name('category.restore');
+
+Route::get('/tag/create', [TagController::class, 'create'])->name('tag.create');
+Route::post('/tag/create', [TagController::class, 'store'])->name('tag.store');
+Route::get('/tag',[TagController::class, 'index'])->name('tag.index');
+
+Route::get('/tag/destroy/{tag}', [TagController::class, 'destroy'])->name('tag.destroy');
+Route::get('/tag/edit/{tag}', [TagController::class, 'edit'])->name('tag.edit');
+Route::put('/tag/edit/{tag}', [TagController::class, 'update'])->name('tag.update');
+Route::get('/tag/trash', [TagController::class, 'trash'])->name('tag.trash');
+Route::get('/tag/restore/{tag}', [TagController::class, 'restore'])->name('tag.restore');
