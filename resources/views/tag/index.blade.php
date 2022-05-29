@@ -8,7 +8,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome da Tag</th>
-                <!--<th>Quantidade de Produtos</th>-->
+                <th>Quantidade de Produtos</th>
                 <th>Editar</th>
                 <th>Apagar</th>
             </tr>
@@ -18,7 +18,7 @@
             <tr>
                 <td>{{$tag->id}}</td>
                 <td>{{$tag->name}}</td>
-                <!--<td>{{$tag->Nfts->count()}}</td>-->
+                <td>{{$tag->Nfts->count()}}</td>
                 <td><a href="{{ route('tag.edit', $tag->id) }}">Editar</a></td>
                 <td><a href="{{ route('tag.destroy', $tag->id) }}">Apagar</a></td>
             </tr>

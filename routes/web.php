@@ -29,6 +29,11 @@ require __DIR__.'/auth.php';
 /*------------------------
 | Route for NFT's (CRUD) |
 ------------------------*/
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/{nft}', [CartController::class, 'store'])->name('cart.store');
+Route::delete('/cart/{nft}', [CartController::class, 'destroy'])->name('cart.destroy');
+
 Route::get('/nft/create', [NftController::class, 'create'])->name('nft.create');
 Route::post('/nft/create', [NftController::class, 'store'])->name('nft.store');
 Route::get('/nft', [NftController::class, 'index'])->name('nft.index');
