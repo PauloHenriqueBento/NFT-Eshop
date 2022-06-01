@@ -51,7 +51,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="background-dark">
         @yield('content')
     </main>
 </body>
