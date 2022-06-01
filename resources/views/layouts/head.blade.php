@@ -19,7 +19,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-primary bg-dark ps-5 pe-5">
+        <nav class="navbar navbar-expand-lg navbar-primary bg-dark ps-5 pe-5 container">
             <div>
                 <a class="navbar-brand" href="#">Logo</a>
             </div>
@@ -32,10 +32,14 @@
 
             <div class="dropdown navegacao">
                 <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    Explore
+                    @if (Auth::check())
+                        {{Auth::user()->name}}
+                    @else
+                        <a href="">TEste</a>
+                    @endif
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                    <li><a class="dropdown-item active" href="{{ route('category.index') }}">Categoria</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
