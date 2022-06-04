@@ -14,7 +14,8 @@ class NftController extends Controller
 
     public function create(){
         return view('nft.create')->with([
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'tags' => Tag::all()
         ]);
     }
 
@@ -30,6 +31,7 @@ class NftController extends Controller
             'price' => $request->price,
         ]);
 
+        $nft->Tags()->sync($request->tags);
 
         session()->flash('success', 'NFT criado com Sucesso!');
         return redirect(route('nft.index'));
@@ -44,7 +46,8 @@ class NftController extends Controller
     public function edit(Nft $nft){
         return view('nft.edit')->with([
             'nft' => $nft,
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'tags' => Tag::all()
         ]);
     }
 
@@ -52,6 +55,8 @@ class NftController extends Controller
         $nft->update($request->all());
         session()->flash('success', 'Nft Editado com Sucesso');
         return redirect(route('nft.index'));
+
+        //Ver esse método. Está diferente no arquivo do prof
     }
 
     public function trash(){
