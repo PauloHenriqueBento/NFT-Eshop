@@ -16,7 +16,7 @@ class creatorAccess
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() AND auth()->user()->creator){
+        if(auth()->user()->isCreator()){
             return $next($request);
         } else {
             dd("Acesso negado, você não é criado");

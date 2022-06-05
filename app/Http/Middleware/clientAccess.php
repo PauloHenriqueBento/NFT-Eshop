@@ -16,7 +16,7 @@ class clientAccess
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() AND auth()->user()->client){
+        if(auth()->user()->isClient()){
             return $next($request);
         } else {
             dd("Acesso negado, você não é cliente");
