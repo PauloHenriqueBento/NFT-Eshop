@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Nft;
+use App\Models\Tag;
 
 class NftController extends Controller
 {
@@ -52,7 +53,26 @@ class NftController extends Controller
     }
 
     public function update(Nft $nft, Request $request){
-        $nft->update($request->all());
+        if($request->image){
+            $image = "storage/".$request->file('image')->store('itens');
+            $nft->update([
+                'name' => $request->name,
+                'description' => $request->description,
+                'price' => $request->price,
+                //'stock' => $request->stock,
+                'category_id' => $request->category_id,
+                'image' => $image
+            ]);
+        }else{
+            $nft->update([
+                'name' => $request->name,
+                'description' => $request->description,
+                'price' => $request->price,
+                //'stock' => $request->stock,
+                'category_id' => $request->category_id,
+            ]);
+        }
+        $nft->Tags()->sync($request->tags);
         session()->flash('success', 'Nft Editado com Sucesso');
         return redirect(route('nft.index'));
 
