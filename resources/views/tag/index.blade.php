@@ -18,7 +18,11 @@
             <tr>
                 <td>{{$tag->id}}</td>
                 <td>{{$tag->name}}</td>
-                <!--<td>{{$tag->Nfts->count()}}</td>-->
+                @if ($tag->Nft)
+                    <td><a href=""></a>{{$tag->Nft->count()}}</td>
+                @else
+                    <td>{{$tag->Nft->count()}}</td>
+                @endif
                 <td><a href="{{ route('tag.edit', $tag->id) }}">Editar</a></td>
                 <td><a href="{{ route('tag.destroy', $tag->id) }}">Apagar</a></td>
             </tr>
