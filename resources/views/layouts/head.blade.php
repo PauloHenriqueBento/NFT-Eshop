@@ -31,13 +31,18 @@
             </div>
 
             <div class="dropdown navegacao">
-                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    @if (Auth::check())
-                        {{Auth::user()->name}}
-                    @else
-                        <a href="">TEste</a>
-                    @endif
-                </button>
+
+                @if (Auth::user())
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </button>
+                @else
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Explorar
+                    </button>
+                @endif
+
+
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                     <li><a class="dropdown-item active" href="{{ route('category.index') }}">Categoria</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
