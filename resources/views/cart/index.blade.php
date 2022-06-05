@@ -4,17 +4,19 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
+                <th class="text-white">Foto</th>
+                <th class="text-white">NFT</th>
+                <th class="text-white">Preço</th>
+                <th class="text-white">Quantidade</th>
             </tr>
         </thead>
         <tbody>
         @foreach($itens as $item)
             <tr>
-                <td>{{$item->Nft->name}}</td>
-                <td>{{$item->Nft->price}}</td>
-                <td>
+                <td class="text-white"><img src="{{ asset($item->Nft->image_path) }}" style="width: 70px"></td>
+                <td class="text-white">{{$item->Nft->name}}</td>
+                <td class="text-white">{{$item->Nft->price}}</td>
+                <td class="text-white">
                     <form action="{{route('cart.store', $item->Nft->id)}}"method="POST" style="display:inline">
                         @csrf
                         <button type="submit" class="btn btn-primary btn-sm">+</button>

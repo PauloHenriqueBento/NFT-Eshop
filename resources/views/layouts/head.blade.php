@@ -21,12 +21,17 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-primary bg-dark ps-5 pe-5">
             <div>
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="/">Logo</a>
             </div>
+
             <div class="pesquisa navegacao">
-                <form>
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="buscar">
-                    <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
+                <form action="{{ route('search.nft') }}">
+                    <div class="input-group">
+                        <input type="text form-control me-2" class="form-control" placeholder="Digite o nome do produto" name="s">
+                        <div class="input-group-append">
+                            <button type="submit" class="input-group-text">Buscar</button>
+                        </div>
+                    </div>
                 </form>
             </div>
 

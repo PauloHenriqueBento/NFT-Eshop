@@ -1,4 +1,4 @@
-@extends('layouts.head')
+@extends('layouts.headAdmin')
 
 @section('content')
     <div class="mt-5 container">

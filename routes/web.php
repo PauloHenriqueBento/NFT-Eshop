@@ -26,11 +26,12 @@ Route::get('/search/tag/{tag}', [eCommerceController::class, 'searchTag'])->name
 Route::get('/search/nft/',  [eCommerceController::class, 'searchNft'])->name('search.nft');
 Route::get('/show/{nft}', [eCommerceController::class, 'showNft'])->name('show.nft');
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/', function () {
+//Pag. FAQ
+Route::get('/faq', function () {
     return view('faq');
 });
 
@@ -41,14 +42,20 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::middleware(['auth'])->group(function(){
+    //Pra adicionar no carrinho tem que estar Autenticado
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::post('/cart/{nft}', [CartController::class, 'store'])->name('cart.store');
     Route::delete('/cart/{nft}', [CartController::class, 'destroy'])->name('cart.destroy');
 });
+/*Route::middleware(['auth'])->group(function(){
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/{nft}', [CartController::class, 'store'])->name('cart.store');
+    Route::delete('/cart/{nft}', [CartController::class, 'destroy'])->name('cart.destroy');
+});*/
 /*------------------------
 | Route for NFT's (CRUD) |
 ------------------------*/
-Route::middleware(['auth'/*,'admin'*/])->group(function(){
+//Route::middleware(['auth'/*,'admin'*/])->group(function(){
     Route::get('/nft/create', [NftController::class, 'create'])->name('nft.create');
     Route::post('/nft/create', [NftController::class, 'store'])->name('nft.store');
     Route::get('/nft', [NftController::class, 'index'])->name('nft.index');
@@ -80,5 +87,5 @@ Route::middleware(['auth'/*,'admin'*/])->group(function(){
     Route::put('/tag/edit/{tag}', [TagController::class, 'update'])->name('tag.update');
     Route::get('/tag/trash', [TagController::class, 'trash'])->name('tag.trash');
     Route::get('/tag/restore/{tag}', [TagController::class, 'restore'])->name('tag.restore');
-});
+//});
 
