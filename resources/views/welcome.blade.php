@@ -37,7 +37,7 @@
         <h2 class="text-white">Tendências</h2>
     </div>
     <div class="row pt-2">
-        <div class="col-3">
+        <div class="col-12 col-lg-6 col-xl-3">
             <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
                 <div class="row m-auto">
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-6 col-xl-3">
             <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
                 <div class="row m-auto">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-6 col-xl-3">
             <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
                 <div class="row m-auto">
@@ -124,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-6 col-xl-3">
             <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
                 <div class="row m-auto">

@@ -48,7 +48,6 @@ class User extends Authenticatable
     public function isAdmin(){
         return $this->role == 'admin';
     }
-<<<<<<< HEAD
 
     public function isClient(){
         return $this->role == 'client';
@@ -57,6 +56,4 @@ class User extends Authenticatable
     public function isCreator(){
         return $this->role == 'creator';
     }
-=======
->>>>>>> paulo
 }
