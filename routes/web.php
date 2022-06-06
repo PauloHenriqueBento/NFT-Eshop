@@ -5,6 +5,7 @@ use App\Http\Controllers\NftController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\Teste_Product;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
 /*------------------------
 | Route for NFT's (CRUD) |
 -----------------------*/
@@ -67,9 +69,17 @@ Route::middleware(['auth','admin'])->group(function () {
     Route::put('/category/edit/{category}', [CategoryController::class, 'update'])->name('category.update');
     Route::get('/category/trash', [CategoryController::class, 'trash'])->name('category.trash');
     Route::get('/category/restore/{category}', [CategoryController::class, 'restore'])->name('category.restore');
+
+    Route::get('/users', [UserController::class, 'index'])->name('user.index');
+
 });
 
 // Client
 Route::middleware(['auth','client'])->group(function () {
 
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
+    Route::get('/user/profile/edit/{user}', [UserController::class, 'edit'])->name('user.edit');
 });
