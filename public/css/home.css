@@ -18,6 +18,10 @@ header nav a:hover{
     width: 50%;
 }
 
+.cart{
+    color: #fff;
+}
+
 .nft{
     width: 250px;
     height: 250px;

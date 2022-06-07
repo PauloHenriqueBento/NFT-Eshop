@@ -83,7 +83,7 @@
                 <div class="text-white collapse navbar-collapse ps-3">
                     <div class="navbar-nav">
                         <a href="#" class="text-decoration-none text-reset nav-link">Sobre</a>
-                        <a href="#" class="text-decoration-none text-reset nav-link">FAQ</a>
+                        <a href="faq" class="text-decoration-none text-reset nav-link">FAQ</a>
                     </div>
                 </div>
             </div>
