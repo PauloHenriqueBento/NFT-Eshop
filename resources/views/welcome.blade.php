@@ -36,20 +36,32 @@
     <div class="mt-5">
         <h2 class="text-white">Tendências</h2>
     </div>
+<<<<<<< HEAD
     <div class="row pt-2">
         <div class="col-12 col-lg-6 col-xl-3">
             <div class="col-3 divnft">
                 <a href="#"><img src="/images/nft.gif" class="nft"></a>
+=======
+
+        <div class="row pt-2">
+            @foreach ($nfts as $nft)
+            <div class="col-3">
+            <div class="mx-auto col-sm-10 col-md-6 col-lg-3 divnft mb-3">
+                <img src="{{ asset($nft->image_path) }}" class="img-fluid nft ">
+>>>>>>> criarCarrinho
                 <div class="row m-auto">
                     <div class="m-auto col-8 pt-2">
-                        <span class="align-middle"><b>Warrior #001</b></span>
+                        <span class="align-middle"><b>{{ $nft->name }}</b></span>
                     </div>
                     <div class="col-4 m-auto pt-2">
-                        <button class="adicionar">+</button>
+                        <!--<a href="{{ route('show.nft', $nft->id) }}" class="btn btn-secondary btn-sm">Visualizar</a>-->
+                        <form action="{{ route('cart.store', $nft->id) }}" method="POST" style="display:inline">
+                            @csrf
+                            <button type="submit" class="adicionar">+</button>
+                        </form>
                     </div>
                     <div class="col-4">
                         <span class="criadorEsq">Preço</span>
-                        <!--<span><i class="fa-solid fa-circle-dollar"></i></span>-->
                     </div>
                     <div class="col-8  d-flex justify-content-end">
                         <div>
@@ -141,7 +153,7 @@
                     <div class="col-8  d-flex justify-content-end">
                         <div>
                             <img src="/images/bit.png" class="bit">
-                            <span><b>$1.000,00</b></span>
+                            <span><b>$ {{ $nft->price }}</b></span>
                         </div>
                     </div>
                     <div class="col-6">
@@ -153,6 +165,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </section>
 

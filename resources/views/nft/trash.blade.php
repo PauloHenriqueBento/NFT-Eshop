@@ -1,30 +1,36 @@
-@extends('layouts.head')
+@extends('layouts.headAdmin')
 
-<a class="btn btn-lg btn-success float-end me-5" href="{{route('nft.create')}}">Criar Nft</a>
+@section('content')
 
-<div class="container mt-3">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Categoria</th>
-                <th>Preço</th>
-                <th>Restaurar</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($nfts as $nft)
+    <div class="d-flex justify-content-center pt-3">
+        <h1 class="text-white">NFTs apagados</h1>
+    </div>
+    <!--<a class="btn btn-lg btn-success float-end me-5" href="{{route('nft.create')}}">Criar Nft</a>-->
+
+    <div class="container mt-3">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>{{$nft->id}}</td>
-                    <td>{{$nft->name}}</td>
-                    <td>{{$nft->description}}</td>
-                    <td>{{$nft->Category->name}}</td>
-                    <td>{{$nft->price}}</td>
-                    <td><a class="btn btn-primary" href="{{ route('nft.restore', $nft->id) }}">Restaurar</a></td>
+                    <th class="text-white">ID</th>
+                    <th class="text-white">Nome</th>
+                    <th class="text-white">Descrição</th>
+                    <th class="text-white">Categoria</th>
+                    <th class="text-white">Preço</th>
+                    <th class="text-white">Restaurar</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach ($nfts as $nft)
+                    <tr>
+                        <td class="text-white">{{$nft->id}}</td>
+                        <td class="text-white">{{$nft->name}}</td>
+                        <td class="text-white">{{$nft->description}}</td>
+                        <td class="text-white">{{$nft->Category->name}}</td>
+                        <td class="text-white">{{$nft->price}}</td>
+                        <td><a class="btn btn-primary" href="{{ route('nft.restore', $nft->id) }}">Restaurar</a></td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+@endsection

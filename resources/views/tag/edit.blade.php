@@ -1,10 +1,20 @@
-@extends('layouts.head')
+@extends('layouts.headAdmin')
 
 @section('content')
-<form action="{{route('tag.update', $tag->id)}}" method="POST">
-    @csrf
-    @method('PUT')
-    <strong class="text-white">Nome da Tag:</strong> <input type="text" name="name" value="{{$tag->name}}">
-    <button type="submit">Enviar</button>
-</form>
+<div class="row container pt-3">
+    <div class="d-flex justify-content-center">
+        <h1 class="text-white">Editar Tag</h1>
+    </div>
+    <div class="col-6">
+        <form action="{{route('tag.update', $tag->id)}}" method="POST">
+            @csrf
+            @method('PUT')
+            <label class="form-label text-white">Nome da Tag:</label>
+            <input class="form-control" type="text" name="name" value="{{$tag->name}}">
+            <div class="d-flex justify-content-start pt-3">
+                <button class="btn btn-success" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
 @endsection
