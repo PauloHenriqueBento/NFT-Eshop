@@ -24,7 +24,7 @@ use App\Http\Controllers\OrderController;
 
 Route::get('/', [eCommerceController::class, 'index'])->name('home');
 Route::get('/search/category/{category}', [eCommerceController::class, 'searchCategory'])->name('search-category');
-Route::get('/search/tag/{tag}', [eCommerceController::class, 'searchTag'])->name('search-tag');
+Route::get('/search/tag/{tag}', [eCommerceController::class, 'searchTag'])->name('serach-tag');
 Route::get('/search/nft/',  [eCommerceController::class, 'searchNft'])->name('search.nft');
 Route::get('/show/{nft}', [eCommerceController::class, 'showNft'])->name('show.nft');
 
@@ -35,6 +35,10 @@ Route::get('/show/{nft}', [eCommerceController::class, 'showNft'])->name('show.n
 //Pag. FAQ
 Route::get('/faq', function () {
     return view('faq');
+});
+
+Route::get('/sobre', function () {
+    return view('sobre');
 });
 
 Route::get('/dashboard', function () {
@@ -65,7 +69,7 @@ Route::middleware(['auth'])->group(function(){
 | Route for NFT's (CRUD) |
 ------------------------*/
 //lembrar descomentar Admin
-Route::middleware(['auth',/*'admin'*/])->group(function(){
+Route::middleware(['auth','admin'])->group(function(){
     Route::get('/nft/create', [NftController::class, 'create'])->name('nft.create');
     Route::post('/nft/create', [NftController::class, 'store'])->name('nft.store');
     Route::get('/nft', [NftController::class, 'index'])->name('nft.index');

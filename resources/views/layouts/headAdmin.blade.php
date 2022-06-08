@@ -68,23 +68,21 @@
                     </ul>
                 </div>
 
-                <div class="dropdown navegacao ps-3">
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        Explore
-                    </button>
+                <div class="dropdown navegacao">
+                    @if (Auth::user())
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ Auth::user()->name }}
+                        </button>
+                    @else
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explorar
+                        </button>
+                    @endif
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item active" href="{{ route('category.index') }}">Categoria</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
-                </div>
-
-
-                <div class="text-white collapse navbar-collapse ps-3">
-                    <div class="navbar-nav">
-                        <a href="#" class="text-decoration-none text-reset nav-link">Sobre</a>
-                        <a href="faq" class="text-decoration-none text-reset nav-link">FAQ</a>
-                    </div>
                 </div>
             </div>
         </nav>

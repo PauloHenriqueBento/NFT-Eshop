@@ -35,11 +35,12 @@
                 </form>
             </div>
 
-            <!--Icone Carrinho-->
-            <a href="cart" class="cart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <div class="cart d-flex justify-content-end">
+                <!--Icone Carrinho-->
+                <a href="cart" class="cart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            </div>
 
             <div class="dropdown navegacao">
-
                 @if (Auth::user())
                     <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
@@ -49,7 +50,6 @@
                         Explorar
                     </button>
                 @endif
-
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                     <li><a class="dropdown-item active" href="{{ route('category.index') }}">Categoria</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -60,7 +60,7 @@
             <div class="d-flex justify-content-end">
                 <div class="text-white">
                     <div class="navbar-nav">
-                        <a href="#" class="text-decoration-none text-reset nav-link">Sobre</a>
+                        <a href="sobre" class="text-decoration-none text-reset nav-link">Sobre</a>
                         <a href="faq" class="text-decoration-none text-reset nav-link">FAQ</a>
                     </div>
                 </div>
