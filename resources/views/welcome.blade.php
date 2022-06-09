@@ -63,7 +63,8 @@
                         <div class="col-6 d-flex justify-content-end">
                             <span class="nomeCriador">Nome</span>
                         </div>
-                        <div class="row pt-1">
+
+                        <div class="row pt-1 mx-auto">
                             <div class="col">
                                 <a href="{{ route ('show.nft', $nft->id)}}" class="btn btn-primary btn-sm" style="width: 90px">Visualizar</a>
                             </div>
