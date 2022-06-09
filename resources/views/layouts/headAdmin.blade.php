@@ -21,7 +21,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-primary bg-dark ps-5 pe-5">
             <div>
-                <a class="navbar-brand" href="/">Logo</a>
+                <a class="navbar-brand" href="/"><img src="{{asset('images/logo.png')}}" alt="" width="50px" style="border-radius: 50%"></a>
             </div>
             <div class="pesquisa navegacao">
                 <form action="{{ route('search.nft') }}">
