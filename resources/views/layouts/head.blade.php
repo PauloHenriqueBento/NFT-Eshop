@@ -21,7 +21,9 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-primary bg-dark ps-5 pe-5 ">
             <div>
-                <a class="navbar-brand" href="/">Logo</a>
+                <a class="navbar-brand" href="/">
+                    <img src="{{asset('images/logo.png')}}" alt="" width="50px" style="border-radius: 50%">
+                </a>
             </div>
 
             <div class="pesquisa navegacao">
@@ -70,23 +72,5 @@
     <main class="background-dark">
         @yield('content')
     </main>
-    <footer class="pt-5">
-        <div class="div-color">
-            <address class="rodape">
-                Av. Eng. Eusébio Stevaux, 823 <br>
-                Santo Amaro, São Paulo - SP<br>
-                04696-000
-            </address>
-            <div class="rodape">
-                <span class="rodape">Tel: (XX) XXXXX-XXXX</span>
-                <div class="icones">
-                    <a href="#" class="midia"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="midia"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="midia"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="midia"><i class="fa-brands fa-telegram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
