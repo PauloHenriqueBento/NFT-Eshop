@@ -56,4 +56,8 @@ class User extends Authenticatable
     public function isCreator(){
         return $this->role == 'creator';
     }
+
+    public function Nfts(){
+        return $this->belongsToMany(Nft::class);
+    }
 }

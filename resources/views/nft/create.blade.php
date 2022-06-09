@@ -31,7 +31,7 @@
                 <div class="col">
                     <label class="form-label text-white pt-3"> Categoria:</label>
                     <select class="form-select" name="category_id">
-                        <option>Selecione uma categoria</option>
+                        <option value="0" selected>Selecione uma categoria</option>
                         @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach

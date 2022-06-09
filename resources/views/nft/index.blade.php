@@ -15,6 +15,7 @@
                     <th class="text-white">Descrição</th>
                     <th class="text-white">Categoria</th>
                     <th class="text-white">Tag</th>
+                    <th class="text-white">Criado por</th>
                     <th class="text-white">Preço</th>
                     <th class="text-white">Editar</th>
                     <th class="text-white">Apagar</th>
@@ -34,7 +35,8 @@
                         @endif
                         <td class="text-white">@foreach($nft->Tags()->get() as $tag)
                             {{$tag->name}}
-                            @endforeach</td>
+                        @endforeach</td>
+                        <td class="text-white">{{$nft->created_by}}</td>
                         <td class="text-white">{{$nft->price}}</td>
                         <td class="text-white"><a class="btn btn-primary" href="{{ route('nft.edit', $nft->id) }}">Editar</a></td>
                         <td class="text-white"><a class="btn btn-danger" href="{{ route('nft.destroy', $nft->id) }}">Apagar</a></td>

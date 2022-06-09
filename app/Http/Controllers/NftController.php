@@ -6,6 +6,8 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Nft;
 use App\Models\Tag;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class NftController extends Controller
 {
@@ -16,18 +18,19 @@ class NftController extends Controller
     public function create(){
         return view('nft.create')->with([
             'categories' => Category::all(),
-            'tags' => Tag::all()
+            'tags' => Tag::all(),
+            'user' => User::all()
         ]);
     }
 
     public function store(Request $request){
         $image = "storage/".$request->file('image_path')->store('itens');
 
-
         $nft = Nft::create([
             'name' => $request->name,
             'description' => $request->description,
             'category_id'  => $request->category_id,
+            'created_by'    => Auth::user()->name,
             'image_path' => $image,
             'price' => $request->price,
         ]);
