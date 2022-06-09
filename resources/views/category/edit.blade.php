@@ -7,7 +7,7 @@
             @csrf
             @method('PUT')
             <label class="form-label text-white"> Nome da Categoria:</label>
-            <input class="form-control" type="text" name="name" value="{{$category->name}}">
+            <input class="form-control" type="text" name="name" minlength="3" maxlength="15" required value="{{$category->name}}">
             <div class="d-flex justify-content-start pt-3">
                 <button class="btn btn-success" type="submit">Enviar</button>
             </div>

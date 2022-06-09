@@ -8,19 +8,19 @@
                 @csrf
                 <div class="form-group">
                     <label for="zipcode"  class="text-white">CEP</label>
-                    <input type="text" class="form-control" name="zipcode" placeholder="CEP">
+                    <input type="text" class="form-control" name="zipcode" placeholder="CEP" pattern= "\d{5}-?\d{3}"  required>
                 </div>
                 <div class="form-group pt-2">
                     <label for="address"  class="text-white">Endereco</label>
-                    <input type="text" class="form-control" name="address" placeholder="Endereço">
+                    <input type="text" class="form-control" name="address" placeholder="Endereço" minlength="5" maxlength="30" required>
                 </div>
                 <div class="form-group pt-2">
                     <label for="city"  class="text-white">Cidade</label>
-                    <input type="text" class="form-control" name="city" placeholder="Cidade">
+                    <input type="text" class="form-control" name="city" placeholder="Cidade" minlength="3" maxlength="15" required>
                 </div>
                 <div class="form-group pt-2">
                     <label for="state"  class="text-white">Estado</label>
-                    <input type="text" class="form-control" name="state" placeholder="Estado">
+                    <input type="text" class="form-control" name="state" placeholder="Estado" minlength="2" maxlength="15" required>
                 </div>
                 <div class="d-grid gap-2 pt-3">
                     <button type="submit" class="btn btn-lg btn-primary my-2 float-end">Comprar</button>

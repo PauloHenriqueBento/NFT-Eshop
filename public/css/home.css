@@ -5,9 +5,11 @@ body{
     background-color:#262323;
 }
 
-header nav a:hover{
-    background-color: #3d028f;
+.carrossel{
+    max-height: 60vh;
 }
+
+
 
 .navegacao{
     margin-left: auto;
@@ -16,10 +18,12 @@ header nav a:hover{
 
 .pesquisa{
     width: 50%;
+    margin-left: 150px;
 }
 
 .cart{
     color: #fff;
+    margin-left: 150px;
 }
 
 .nft{
@@ -28,13 +32,14 @@ header nav a:hover{
     border-radius: 20px;
 }
 .adicionar{
-    width: 60px;
-    height: 30px;
+    width: 88px;
+    height: 33px;
     border-radius: 4px;
     border: none;
     background-color: rgb(188, 189, 192);
     align-items: center;
     font-weight: 500;
+    color: #262323;
 }
 .adicionar:hover{
     background-color: rgb(119, 125, 148);
@@ -47,15 +52,15 @@ header nav a:hover{
 .divnft{
     background-color: white;
     width: 250px;
-    height: 350px;
+    height: 390px;
     border-radius: 20px;
 }
 .nomeCriador{
     font-size: 13px;
 }
 .bit{
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
 }
 
 .criador{

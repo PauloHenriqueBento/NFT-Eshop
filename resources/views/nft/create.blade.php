@@ -10,21 +10,21 @@
             <div class="row">
                 <div class="col">
                     <label class="form-label text-white">Nome do NFT:</label>
-                    <input class="form-control" type="text" name="name" autofocus>
+                    <input class="form-control" type="text" name="name" minlength="3" maxlength="17" required autofocus>
                 </div>
                 <div class="col">
                     <label class="form-label text-white"> Drescrição:</label>
-                    <input class="form-control" type="text" name="description">
+                    <input class="form-control" type="text" minlength="3" maxlength="30" name="description" minlength="5" maxlength="30" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <label class="form-label text-white pt-3"> Preço:</label>
-                    <input class="form-control" type="number" step="0.1" name="price">
+                    <input class="form-control" type="number" step="0.1" name="price" required>
                 </div>
                 <div class="col">
                     <label class="form-label text-white pt-3"> Imagem:</label>
-                    <input class="form-control" type="file" name="image_path">
+                    <input class="form-control" type="file" name="image_path" required>
                 </div>
             </div>
             <div class="row">

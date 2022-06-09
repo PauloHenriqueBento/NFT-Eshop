@@ -10,7 +10,7 @@
             @csrf
             @method('PUT')
             <label class="form-label text-white">Nome da Tag:</label>
-            <input class="form-control" type="text" name="name" value="{{$tag->name}}">
+            <input class="form-control" type="text" name="name"  minlength="3" maxlength="10" required value="{{$tag->name}}">
             <div class="d-flex justify-content-start pt-3">
                 <button class="btn btn-success" type="submit">Enviar</button>
             </div>
