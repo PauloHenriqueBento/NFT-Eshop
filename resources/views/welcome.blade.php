@@ -81,77 +81,9 @@
         @endforeach
     </div>
 </section>
-
-<section class="container">
-    <div class="mt-5">
-        <h2 class="text-white">Top Criadores</h2>
-    </div>
-    <div class="row pt-2">
-        <div class="col-3">
-            <div class="divnft-2">
-                <img src="https://wallpapercave.com/wp/wp10537280.jpg" class="nft-criadores">
-                <div class="d-flex justify-content-center">
-                    <img src="https://public.nftstatic.com/static/nft/zipped/18b5012fbd8341d2a6a2d994a2e6509a_zipped.jpeg" class="icon">
-                </div>
-                <div class="d-flex justify-content-center pt-1">
-                    <span>NFT LION</span>
-                </div>
-                <div class="d-flex justify-content center ps-3 pt-1">
-                    <p>Voice Life F-NFT represents the tokenization of its intellectual property and
-                        groundbreaking wireless power.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="divnft-2">
-                <img src="https://wallpapercave.com/wp/wp10537280.jpg" class="nft-criadores">
-                <div class="d-flex justify-content-center">
-                    <img src="https://public.nftstatic.com/static/nft/zipped/18b5012fbd8341d2a6a2d994a2e6509a_zipped.jpeg" class="icon h-50">
-                </div>
-                <div class="d-flex justify-content-center pt-1">
-                    <span>NFT LION</span>
-                </div>
-                <div class="d-flex justify-content center ps-3 pt-1">
-                    <p>Voice Life F-NFT represents the tokenization of its intellectual property and
-                        groundbreaking wireless power.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="divnft-2">
-                <img src="https://wallpapercave.com/wp/wp10537280.jpg" class="nft-criadores">
-                <div class="d-flex justify-content-center">
-                    <img src="https://public.nftstatic.com/static/nft/zipped/18b5012fbd8341d2a6a2d994a2e6509a_zipped.jpeg" class="icon h-50">
-                </div>
-                <div class="d-flex justify-content-center pt-1">
-                    <span>NFT LION</span>
-                </div>
-                <div class="d-flex justify-content center ps-3 pt-1">
-                    <p>Voice Life F-NFT represents the tokenization of its intellectual property and
-                        groundbreaking wireless power.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="divnft-2">
-                <img src="https://wallpapercave.com/wp/wp10537280.jpg" class="nft-criadores">
-                <div class="d-flex justify-content-center">
-                    <img src="https://public.nftstatic.com/static/nft/zipped/18b5012fbd8341d2a6a2d994a2e6509a_zipped.jpeg" class="icon h-50">
-                </div>
-                <div class="d-flex justify-content-center pt-1">
-                    <span>NFT LION</span>
-                </div>
-                <div class="d-flex justify-content center ps-3 pt-1">
-                    <p>Voice Life F-NFT represents the tokenization of its intellectual property and
-                        groundbreaking wireless power.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
-<footer class="pt-5">
-    <div class="div-color">
-        <address class="rodape">
+<footer>
+
             Av. Eng. Eusébio Stevaux, 823 <br>
             Santo Amaro, São Paulo - SP<br>
             04696-000
