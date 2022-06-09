@@ -64,6 +64,8 @@
                     <div class="navbar-nav">
                         <a href="/sobre" class="text-decoration-none text-reset nav-link">Sobre</a>
                         <a href="/faq" class="text-decoration-none text-reset nav-link">FAQ</a>
+                        <a style="color: white" href="{{route('user.logout')}}" class="class="text-decoration-none text-reset nav-link"">Logout</a>
+
                     </div>
                 </div>
             </div>

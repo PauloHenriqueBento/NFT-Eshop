@@ -42,7 +42,7 @@ Route::get('/sobre', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('welcome');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
@@ -105,5 +105,6 @@ Route::middleware(['auth',/*'admin'*/])->group(function(){
     Route::get('/tag/restore/{tag}', [TagController::class, 'restore'])->name('tag.restore');
 
     Route::get('/users', [UserController::class, 'index'])->name('user.index');
+    Route::get('/users', [UserController::class, 'logout'])->name('user.logout');
 });
 
