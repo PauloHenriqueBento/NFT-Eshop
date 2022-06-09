@@ -12,7 +12,7 @@
             <div class="row pt-2 mt-5">
             <!--Página que mostra os produtos direto do BD-->
         @foreach ($nfts as $nft)
-            <div class="col-3 mx-auto">
+            <div class="col-3 mx-auto mb-2">
                 <div class="mx-auto col-sm-10 col-md-6 col-lg-3 divnft mb-3">
                     <img src="{{ asset($nft->image_path) }}" class="img-fluid nft ">
                     <div class="row m-auto">

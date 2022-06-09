@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order_nft', function (Blueprint $table) {
-            $table->id('order_id');
+        Schema::create('nft_order', function (Blueprint $table) {
+            $table->integer('order_id');
             $table->integer('nft_id');
             $table->string('name');
             $table->decimal('price', 8, 2);
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_nft');
+        Schema::dropIfExists('nft_order');
     }
 };

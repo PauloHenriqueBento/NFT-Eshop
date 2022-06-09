@@ -34,11 +34,11 @@ Route::get('/show/{nft}', [eCommerceController::class, 'showNft'])->name('show.n
 
 //Pag. FAQ
 Route::get('/faq', function () {
-    return view('faq');
+    return view('faq')->name('faq');
 });
 
 Route::get('/sobre', function () {
-    return view('sobre');
+    return view('sobre')->name('sobre');
 });
 
 Route::get('/dashboard', function () {
@@ -53,6 +53,8 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/cart/{nft}', [CartController::class, 'store'])->name('cart.store');
     Route::delete('/cart/{nft}', [CartController::class, 'destroy'])->name('cart.destroy');
 
+    Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+    Route::get('/order', [OrderController::class, 'index'])->name('order.index');
     Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
     Route::get('/user/profile/edit/{user}', [UserController::class, 'edit'])->name('user.edit');
 });
@@ -69,7 +71,7 @@ Route::middleware(['auth'])->group(function(){
 | Route for NFT's (CRUD) |
 ------------------------*/
 //lembrar descomentar Admin
-Route::middleware(['auth','admin'])->group(function(){
+Route::middleware(['auth',/*'admin'*/])->group(function(){
     Route::get('/nft/create', [NftController::class, 'create'])->name('nft.create');
     Route::post('/nft/create', [NftController::class, 'store'])->name('nft.store');
     Route::get('/nft', [NftController::class, 'index'])->name('nft.index');
