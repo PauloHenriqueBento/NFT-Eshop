@@ -12,13 +12,13 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1449850/header.jpg" class="d-block w-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1449850/header.jpg" class="d-block w-100 carrossel">
         </div>
         <div class="carousel-item">
-            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1449850/header.jpg" class="d-block w-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1449850/header.jpg" class="d-block w-100 carrossel">
         </div>
         <div class="carousel-item">
-            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1449850/header.jpg" class="d-block w-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1449850/header.jpg" class="d-block w-100 carrossel">
         </div>
     </div>
 
@@ -33,42 +33,49 @@
 </section>
 
 <section class="container">
-    <div class="mt-5">
+    <!--<div class="mt-5">
         <h2 class="text-white">Tendências</h2>
-    </div>
-        <div class="row pt-2">
+    </div>-->
+        <div class="row pt-2 mt-5">
             @foreach ($nfts as $nft)
-            <div class="col-3">
-            <div class="mx-auto col-sm-10 col-md-6 col-lg-3 divnft mb-3">
-                <img src="{{ asset($nft->image_path) }}" class="img-fluid nft ">
-                <div class="row m-auto">
-                    <div class="m-auto col-8 pt-2">
-                        <span class="align-middle"><b>{{ $nft->name }}</b></span>
-                    </div>
-                    <div class="col-4 m-auto pt-2">
-                        <!--<a href="{{ route('show.nft', $nft->id) }}" class="btn btn-secondary btn-sm">Visualizar</a>-->
-                        <form action="{{ route('cart.store', $nft->id) }}" method="POST" style="display:inline">
-                            @csrf
-                            <button type="submit" class="adicionar">+</button>
-                        </form>
-                    </div>
-                    <div class="col-4">
-                        <span class="criadorEsq">Preço</span>
-                    </div>
-                    <div class="col-8  d-flex justify-content-end">
-                        <div>
-                            <img src="/images/bit.png" class="bit">
-                            <span><b>$ {{ $nft->price }}</b></span>
+            <div class="col-3 mt-3">
+                <div class="mx-auto col-sm-10 col-md-6 col-lg-3 divnft mb-3">
+                    <img src="{{ asset($nft->image_path) }}" class="img-fluid nft ">
+                    <div class="row m-auto">
+                        <div class="m-auto col-8 pt-2">
+                            <span class="align-middle"><b>{{ $nft->name }}</b></span>
+                        </div>
+                        <div class="col-4 m-auto pt-2">
+
+                        </div>
+                        <div class="col-4">
+                            <span class="criadorEsq">Preço</span>
+                        </div>
+                        <div class="col-8  d-flex justify-content-end">
+                            <div>
+                                <img src="/images/bit.png" class="bit">
+                                <span><b>$ {{ $nft->price }}</b></span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <span class="criadorEsq">Criador</span>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <span class="nomeCriador">{{$nft->created_by}}</span>
+                        </div>
+                        <div class="row pt-1">
+                            <div class="col">
+                                <a href="{{ route ('show.nft', $nft->id)}}" class="btn btn-primary btn-sm" style="width: 90px">Visualizar</a>
+                            </div>
+                            <div class="col">
+                                <form action="{{ route('cart.store', $nft->id) }}" method="POST" style="display:inline">
+                                    @csrf
+                                    <button type="submit" class="adicionar">Adicionar</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <span class="criadorEsq">Criador</span>
-                    </div>
-                    <div class="col-6 d-flex justify-content-end">
-                        <span class="nomeCriador">Nome</span>
-                    </div>
                 </div>
-            </div>
         </div>
         @endforeach
     </div>
@@ -141,4 +148,24 @@
         </div>
     </div>
 </section>
+<footer class="pt-5">
+    <div class="div-color">
+        <address class="rodape">
+            Av. Eng. Eusébio Stevaux, 823 <br>
+            Santo Amaro, São Paulo - SP<br>
+            04696-000
+        </address>
+        <div class="rodape">
+            <span class="rodape">Tel: (XX) XXXXX-XXXX</span>
+            <div class="icones">
+                <a href="#" class="midia"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="midia"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="midia"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="midia"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 @endsection

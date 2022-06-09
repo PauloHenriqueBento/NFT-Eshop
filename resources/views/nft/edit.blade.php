@@ -10,21 +10,21 @@
             <div class="row">
                 <div class="col">
                     <label class="text-white form-label"> Nome do NFT:</label>
-                    <input class="form-control" type="text" name="name" value="{{$nft->name}}">
+                    <input class="form-control" type="text" name="name" value="{{$nft->name}}"  minlength="3" maxlength="17" required autofocus>
                 </div>
                 <div class="col">
                     <label class="text-white form-label"> Drescrição:</label>
-                    <input class="form-control" type="text" name="description" value="{{$nft->description}}">
+                    <input class="form-control" type="text" name="description" minlength="3" maxlength="30"  value="{{$nft->description}}"  minlength="5" maxlength="30" required>
                 </div>
             </div>
             <div class="row pt-2">
                 <div class="col">
                     <label class="text-white form-label"> Preço:</label>
-                    <input class="form-control" type="number" step="0.1" name="price" value="{{$nft->price}}">
+                    <input class="form-control" type="number" step="0.1" name="price" value="{{$nft->price}}" required>
                 </div>
                 <div class="col">
                     <label class="text-white form-label">Categoria:</label>
-                    <select class="form-control" name="category_id">
+                    <select class="form-control" name="category_id" required>
 
                         @foreach($categories as $category)
                         <option value="{{$category->id}}"
@@ -36,7 +36,7 @@
             </div>
             <div class="col-6 mt-3">
                 <label class="text-white form-label">Tag:</label>
-                <select class="form-control" multiple name="tags[]">
+                <select class="form-control" multiple name="tags[]" required>
                     @foreach($tags as $tag)
                     <option value="{{$tag->id}}"
                         {{ $nft->hasTag($tag->id) ? 'selected' : '' }}

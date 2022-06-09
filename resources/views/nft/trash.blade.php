@@ -25,7 +25,11 @@
                         <td class="text-white">{{$nft->id}}</td>
                         <td class="text-white">{{$nft->name}}</td>
                         <td class="text-white">{{$nft->description}}</td>
-                        <td class="text-white">{{$nft->Category->name}}</td>
+                        @if ($nft->Category)
+                            <td class="text-white">{{$nft->Category->name}}</td>
+                        @else
+                            <td class="text-white">Sem categoria</td>
+                        @endif
                         <td class="text-white">{{$nft->price}}</td>
                         <td><a class="btn btn-primary" href="{{ route('nft.restore', $nft->id) }}">Restaurar</a></td>
                     </tr>
