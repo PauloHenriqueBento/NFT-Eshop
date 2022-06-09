@@ -40,10 +40,10 @@
             @foreach ($nfts as $nft)
             <div class="col-3 mt-3">
                 <div class="mx-auto col-sm-10 col-md-6 col-lg-3 divnft mb-3">
-                    <img src="{{ asset($nft->image_path) }}" class="img-fluid nft ">
+                    <a href="{{ route ('show.nft', $nft->id)}}"><img src="{{ asset($nft->image_path) }}" class="img-fluid nft "></a>
                     <div class="row m-auto">
                         <div class="m-auto col-8 pt-2">
-                            <span class="align-middle"><b>{{ $nft->name }}</b></span>
+                            <span class="align-middle text-uppercase"><b>{{ $nft->name }}</b></span>
                         </div>
                         <div class="col-4 m-auto pt-2">
 

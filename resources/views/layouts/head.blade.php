@@ -60,8 +60,8 @@
             <div class="d-flex justify-content-end">
                 <div class="text-white">
                     <div class="navbar-nav">
-                        <a href="sobre" class="text-decoration-none text-reset nav-link">Sobre</a>
-                        <a href="faq" class="text-decoration-none text-reset nav-link">FAQ</a>
+                        <a href="/sobre" class="text-decoration-none text-reset nav-link">Sobre</a>
+                        <a href="/faq" class="text-decoration-none text-reset nav-link">FAQ</a>
                     </div>
                 </div>
             </div>

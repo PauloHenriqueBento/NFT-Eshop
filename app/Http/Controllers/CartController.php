@@ -37,7 +37,7 @@ class CartController extends Controller
     }
 
     public function destroy(Nft $nft){
-        $user = auth()->user();
+        $user = Auth()->user();
         $cart = Cart::where([
             'user_id' => $user->id,
             'nft_id' => $nft->id])->first();
