@@ -47,6 +47,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+
 Route::middleware(['auth'])->group(function(){
     //Pra adicionar no carrinho tem que estar Autenticado
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');

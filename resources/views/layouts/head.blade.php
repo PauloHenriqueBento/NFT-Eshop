@@ -42,7 +42,7 @@
                 <a href="cart" class="cart"><i class="fa-solid fa-cart-arrow-down"></i></a>
             </div>
 
-            <div class="dropdown navegacao">
+            <div class="dropdown navegacao me-3">
                 @if (Auth::user())
                     <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
@@ -54,7 +54,7 @@
                 @endif
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                     <li><a class="dropdown-item active" href="{{ route('category.index') }}">Categoria</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="{{route('logout')}}">Deslogar</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
@@ -62,10 +62,15 @@
             <div class="d-flex justify-content-end">
                 <div class="text-white">
                     <div class="navbar-nav">
-                        <a href="/sobre" class="text-decoration-none text-reset nav-link">Sobre</a>
-                        <a href="/faq" class="text-decoration-none text-reset nav-link">FAQ</a>
-                        <a style="color: white" href="{{route('user.logout')}}" class="class="text-decoration-none text-reset nav-link"">Logout</a>
+                        @if (Auth::user())
 
+                        @else
+                            <a href="{{ route('login') }}" class="text-decoration-none text-reset nav-link">Login</a>
+                            <a href="{{ route('register') }}" class="text-decoration-none text-reset nav-link">Cadastrar</a>
+                            <a href="/sobre" class="text-decoration-none text-reset nav-link">Sobre</a>
+                            <a href="faq" class="text-decoration-none text-reset nav-link">FAQ</a>
+                            <a style="color: white" href="{{route('user.logout')}}" class="text-decoration-none text-reset nav-link">Logout</a>
+                        @endif
                     </div>
                 </div>
             </div>

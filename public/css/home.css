@@ -17,7 +17,7 @@ body{
 }
 
 .pesquisa{
-    width: 50%;
+    min-width: 32% !important;
     margin-left: 150px;
 }
 

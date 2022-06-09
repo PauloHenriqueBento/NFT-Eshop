@@ -6,25 +6,25 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Foto</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Função</th>
-                <th>Apagar</th>
-                <th>Editar</th>
+                <th class="text-white">ID</th>
+                <th class="text-white">Foto</th>
+                <th class="text-white">Nome</th>
+                <th class="text-white">E-mail</th>
+                <th class="text-white">Função</th>
+                <th class="text-white">Apagar</th>
+                <th class="text-white">Editar</th>
             </tr>
         </thead>
         <tbody>
             @foreach($users as $user)
             <tr>
-                <td>{{$user->id}}</td>
-                <td>{{$user->name}}</td> <!-- Foto -->
-                <td>{{$user->name}}</td>
-                <td>{{$user->email}}</td>
-                <td>{{$user->role}}</td>
-                <td><a href="">Editar</a></td>
-                <td><a href="">Apagar</a></td>
+                <td class="text-white">{{$user->id}}</td>
+                <td class="text-white">{{$user->name}}</td> <!-- Foto -->
+                <td class="text-white">{{$user->name}}</td>
+                <td class="text-white">{{$user->email}}</td>
+                <td class="text-white">{{$user->role}}</td>
+                <td class="text-white"><a href="">Editar</a></td>
+                <td class="text-white"><a href="">Apagar</a></td>
             </tr>
             @endforeach
         <tbody>
