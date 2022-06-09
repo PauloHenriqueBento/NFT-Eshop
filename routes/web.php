@@ -8,6 +8,7 @@ use App\Http\Controllers\Teste_Product;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\eCommerceController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 
 
 /*
@@ -55,11 +56,16 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::post('/cart/{nft}', [CartController::class, 'store'])->name('cart.store');
     Route::delete('/cart/{nft}', [CartController::class, 'destroy'])->name('cart.destroy');
+
+    //Paulo essas 2 rotas acho que tanto faz, ficar aqui ou nas middleware de cima
+    Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+    Route::get('/order', [OrderController::class, 'index'])->name('order.index');
 });
 /*------------------------
 | Route for NFT's (CRUD) |
 ------------------------*/
-Route::middleware(['auth','admin'])->group(function(){
+//lembrar descomentar Admin
+Route::middleware(['auth',/*'admin'*/])->group(function(){
     Route::get('/nft/create', [NftController::class, 'create'])->name('nft.create');
     Route::post('/nft/create', [NftController::class, 'store'])->name('nft.store');
     Route::get('/nft', [NftController::class, 'index'])->name('nft.index');
